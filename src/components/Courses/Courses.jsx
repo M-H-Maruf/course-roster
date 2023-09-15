@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Course from './../Course/Course';
 
 
 const Courses = () => {
@@ -12,8 +13,9 @@ const Courses = () => {
     }, [])
 
     return (
-        <div>
-
+        <div className="col-span-3 grid grid-cols-3">
+            courses{courses.length}
+            <Course></Course>
         </div>
     );
 };
