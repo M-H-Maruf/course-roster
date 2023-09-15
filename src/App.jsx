@@ -1,6 +1,6 @@
-import React from "react";
 
-import { ToastContainer, toast, Zoom, Bounce } from "react-toastify";
+
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Header from "./components/Header/Header";

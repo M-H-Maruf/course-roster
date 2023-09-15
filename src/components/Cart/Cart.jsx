@@ -31,6 +31,9 @@ const Cart = ({ selectedCourses, remainingHour, totalHour, totalPrice }) => {
 
 Cart.propTypes = {
     selectedCourses: PropTypes.array,
+    remainingHour: PropTypes.number,
+    totalHour: PropTypes.number,
+    totalPrice: PropTypes.number,
 };
 
 export default Cart;
