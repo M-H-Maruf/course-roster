@@ -15,7 +15,9 @@ const Courses = () => {
     return (
         <div className="col-span-3 grid grid-cols-3">
             courses{courses.length}
-            <Course></Course>
+            {
+                courses.map((course, idx) => <Course key={idx} course={course}></Course>)
+            }
         </div>
     );
 };
