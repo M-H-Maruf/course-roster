@@ -11,6 +11,7 @@ export default {
             "course-secondary": "#2F80ED",
             "course-diluted": "#1C1B1B80",
             "course-dil": "#1C1B1B60",
+            "course-background": "#F3F3F3",
         },
     },
 },
