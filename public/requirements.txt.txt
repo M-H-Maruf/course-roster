@@ -2,16 +2,16 @@
 => create fake json data (must contain {9 objects} - image, course_name, credit, price, details) //completed
 => each row will contain 3 cards and have a total of 9 cards //completed 
 => there will be cart section on the right side //completed
-=> each card will have a select button that'll add course name to the cart 
-=> each course can only be added once
-=> i can show a toast if i want when trying to add a course for the second time
-=> add total credit hour in cart when select is clicked
-=> total credit hour can be 20 at most
-=> show a toast when trying to exceed 20
-=> show remaining credit hour until 20 hr is reached
-=> remaining credit hours can't be less than 0
-=> show a toast when trying to exceed 0
-=> total price (optional)
+=> each card will have a select button that'll add course name to the cart  //completed
+=> each course can only be added once //completed
+=> i can show a toast if i want when trying to add a course for the second time //completed
+=> add total credit hour in cart when select is clicked //completed
+=> total credit hour can be 20 at most //completed
+=> show a toast when trying to exceed 20 //completed
+=> show remaining credit hour until 20 hr is reached //completed
+=> remaining credit hours can't be less than 0 //completed
+=> show a toast when trying to exceed 0 //completed
+=> total price (optional) //completed
 => 
 => 
 => 
@@ -21,7 +21,7 @@
 
 <----- Bonus task ----->
 => at least 5 meaning full commits //completed
-=> create a readme file and add the answer to the two questions
+=> create a readme file and add the answer to the two questions //completed
 => the questions are provided within the assignment repository in programming hero github //completed
 => 
 => 

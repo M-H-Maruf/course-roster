@@ -1,3 +1,7 @@
+import React from "react";
+
+import { ToastContainer, toast, Zoom, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Courses from "./components/Courses/Courses";
@@ -5,6 +9,28 @@ import Cart from "./components/Cart/Cart";
 import { useState } from "react";
 
 function App() {
+    const notifyAlreadyAdded = () => toast.error("You've already added this course!", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+
+        const notifyCreditExceeded = () => toast.warning("You've already used up the credit hours available!", {
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+        
     const [selectedCourses, setSelectedCourses] = useState([]);
     const [remainingHour, setRemainingHour] = useState(20);
     const [totalHour, setTotalHour] = useState(0);
@@ -27,12 +53,12 @@ function App() {
             const newTotalPrice = totalPrice + course.price;
             setTotalPrice(newTotalPrice);
         }
-        
-        if (isObjectInArray){
-            window.alert("This course is already added.");
+
+        else if (isObjectInArray) {
+            notifyAlreadyAdded();
         }
-        if (remainingHour < course.credit){
-            window.alert("You've already used up the available 20 hours for course credit.")
+        else if (remainingHour < course.credit) {
+            notifyCreditExceeded();
         }
     };
     return (
@@ -40,12 +66,25 @@ function App() {
             <Header></Header>
             <div className="grid grid-cols-4 my-8 gap-6">
                 <Courses handleAddToCart={handleAddToCart}></Courses>
+
                 <Cart
                     selectedCourses={selectedCourses}
                     remainingHour={remainingHour}
                     totalHour={totalHour}
                     totalPrice={totalPrice}
                 ></Cart>
+                <ToastContainer
+                    position="bottom-right"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="colored"
+                />
             </div>
         </div>
     );
