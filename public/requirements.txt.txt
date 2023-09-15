@@ -1,7 +1,7 @@
 <----- Main task ----->
-=> create fake json data (must contain {9 objects} - image, course_name, credit, price, details)
-=> each row will contain 3 cards and have a total of 9 cards 
-=> there will be cart section on the right side
+=> create fake json data (must contain {9 objects} - image, course_name, credit, price, details) //completed
+=> each row will contain 3 cards and have a total of 9 cards //completed 
+=> there will be cart section on the right side //completed
 => each card will have a select button that'll add course name to the cart 
 => each course can only be added once
 => i can show a toast if i want when trying to add a course for the second time
@@ -20,9 +20,9 @@
 
 
 <----- Bonus task ----->
-=> at least 5 meaning full commits
+=> at least 5 meaning full commits //completed
 => create a readme file and add the answer to the two questions
-=> the questions are provided within the assignment repository in programming hero github
+=> the questions are provided within the assignment repository in programming hero github //completed
 => 
 => 
 => 

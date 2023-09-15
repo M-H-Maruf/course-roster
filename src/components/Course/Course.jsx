@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FiDollarSign } from 'react-icons/fi';
 import { HiOutlineBookOpen } from 'react-icons/hi2';
 
-const Course = ({course}) => {
+const Course = ({course, handleAddToCart}) => {
     return (
         <div className='bg-white rounded-xl w-full p-5 flex flex-col justify-center gap-3'>
             <img src={course.image} alt={course.course_name} className='w-full rounded-lg mb-1' />
@@ -17,14 +17,17 @@ const Course = ({course}) => {
                 <HiOutlineBookOpen></HiOutlineBookOpen>
                 <p className='font-medium text-course-dil'>Credit: {course.credit}hr</p>
                 </span>
+                
             </div>
-            <button className='w-full text-white rounded-lg bg-course-secondary text-lg font-semibold p-2'>Select</button>
+            <button onClick={()=>handleAddToCart(course)} className='w-full text-white rounded-lg bg-course-secondary text-lg font-semibold p-2'>Select</button>
         </div>
     );
 };
 
 Course.propTypes = {
-    course: PropTypes.object.isRequired
+    course: PropTypes.object.isRequired,
+    handleAddToCart: PropTypes.func.isRequired
+    
 }
 
 export default Course;
