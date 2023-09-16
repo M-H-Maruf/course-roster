@@ -19,7 +19,7 @@ const Course = ({course, handleAddToCart}) => {
                 </span>
                 
             </div>
-            <button onClick={()=>handleAddToCart(course)} className='w-full text-white rounded-lg bg-course-secondary text-lg font-semibold p-2'>Select</button>
+            <button onClick={()=>handleAddToCart(course)} className='w-full text-white rounded-lg border-2 border-white bg-course-secondary text-lg font-semibold p-2 hover:bg-white hover:text-course-secondary hover:border-2 hover:border-course-secondary active:bg-slate-200'>Select</button>
         </div>
     );
 };
