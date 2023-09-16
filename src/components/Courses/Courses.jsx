@@ -16,7 +16,7 @@ const Courses = ({ handleAddToCart }) => {
 
     // return from Courses component
     return (
-        <div className="col-span-3 grid grid-cols-3 gap-6 justify-between items-center">
+        <div className="lg:col-span-3 md:col-span-2 md:grid-cols-2 grid lg:grid-cols-3 grid-cols-1 gap-6 justify-between items-center">
             {courses.map((course, idx) => (
                 <Course
                     key={idx}

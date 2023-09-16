@@ -67,7 +67,7 @@ function App() {
     return (
         <div className="font-inter p-14 bg-course-background">
             <Header></Header>
-            <div className="grid grid-cols-4 my-8 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 my-8 gap-6">
                 <Courses handleAddToCart={handleAddToCart}></Courses>
 
                 <Cart
